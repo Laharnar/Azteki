@@ -1100,7 +1100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   refPoint1: {fileID: 2138662615}
   refPoint2: {fileID: 808383074}
-  speed: 1
+  speed: 8
   startPoint: {fileID: 1993466395}
   spawnedStairs: []
   obstaclePrefs:
