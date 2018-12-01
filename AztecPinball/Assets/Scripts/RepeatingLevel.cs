@@ -44,7 +44,7 @@ public class RepeatingLevel : MonoBehaviour {
             for (int k = 0; k < numOfSpawnPointsOnStairs; k++) {
                 // in scene, stairs have n child empty game objects for references where traps can spawn.
                 Transform obstacle = Instantiate(obstaclePrefs[i],
-                    stair.GetChild(k).position, new Quaternion());
+                    stair.GetChild(k).position, obstaclePrefs[i].rotation);
                 obstacle.gameObject.SetActive(false);
                 obstacle.gameObject.transform.parent = stair.GetChild(k);
             }
