@@ -15,8 +15,14 @@ public class RepeatingLevel : MonoBehaviour {
     public Transform stairPref;
     public int numOfSpawnPointsOnStairs = 2;
 
+    public Transform characterRef;
+    public Transform startingRefPoint;
+    Vector3 cameraRefDir;
+
     // Use this for initialization
     void Start () {
+        cameraRefDir =  Camera.main.transform.position- startingRefPoint.transform.position;
+
         numOfSpawnPointsOnStairs = startPoint.childCount;
         for (int i = 0; i < 10; i++) {
             Spawn(startPoint.transform.position);
@@ -71,8 +77,10 @@ public class RepeatingLevel : MonoBehaviour {
     // Update is called once per frame
     void Update () {
         // TODO: camera should follow falling body, not move in dir.
-        Camera.main.transform.Translate(
-            (refPoint2.position - refPoint1.position).normalized * speed * Time.deltaTime, Space.World);
+        //Camera.main.transform.position = characterRef.transform.position + ;
+        Camera.main.transform.position = characterRef.transform.position + cameraRefDir;
+//        Camera.main.transform.Translate(
+ //           (refPoint2.position - refPoint1.position).normalized * speed * Time.deltaTime, Space.World);
 
         // move stairs at the top to the bottom.
         for (int i = 0; i < numOfSpawnPointsOnStairs; i++) {
