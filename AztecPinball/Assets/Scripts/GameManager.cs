@@ -19,5 +19,6 @@ public class GameManager:MonoBehaviour {
 
     private void Update() {
         counter = recordedCollisions.Count;
+
     }
 }
