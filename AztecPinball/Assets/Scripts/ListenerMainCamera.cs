@@ -4,6 +4,8 @@ public class ListenerMainCamera : MonoBehaviour {
 
     int volume;
     AudioListener al;
+    AudioSource audio;
+    public AudioClip[] levelMusic;
 
     void Awake()
     {
@@ -16,5 +18,11 @@ public class ListenerMainCamera : MonoBehaviour {
             al.enabled = !enabled;
         }
     }
-	
+    private void Start()
+    {
+        audio = GetComponent<AudioSource>();
+        audio.clip = levelMusic[Random.Range(0, levelMusic.Length)];
+        audio.Play();
+    }
+
 }
