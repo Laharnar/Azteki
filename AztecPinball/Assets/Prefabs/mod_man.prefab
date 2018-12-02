@@ -115,6 +115,7 @@ GameObject:
   - component: {fileID: 54169140670881730}
   - component: {fileID: 144557207569252100}
   - component: {fileID: 136018425734489140}
+  - component: {fileID: 114601250339387926}
   m_Layer: 0
   m_Name: Bone.013
   m_TagString: Untagged
@@ -165,6 +166,7 @@ GameObject:
   - component: {fileID: 4111691088878378}
   - component: {fileID: 54195558235982900}
   - component: {fileID: 65347063904123298}
+  - component: {fileID: 114721672362177204}
   m_Layer: 0
   m_Name: Bone
   m_TagString: Untagged
@@ -314,6 +316,7 @@ GameObject:
   - component: {fileID: 54171431342272268}
   - component: {fileID: 144008890303793980}
   - component: {fileID: 136471993100546404}
+  - component: {fileID: 114785411238981424}
   m_Layer: 0
   m_Name: Bone.007
   m_TagString: Untagged
@@ -636,7 +639,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1496956027710844}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.7852623, y: -0.73777235, z: 0.29092196}
+  m_LocalPosition: {x: 3.08, y: -0.73777235, z: 0.29092196}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4703574090964818}
@@ -792,7 +795,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1291984783989996}
   serializedVersion: 2
-  m_Mass: 4.6875
+  m_Mass: 20.79
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -947,6 +950,48 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114601250339387926
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1215736083466410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb24ce9ab1f37f54da157afb0ed08247, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitPoints: 100
+  attachedToTorso: 1
+  ct: {fileID: 114721672362177204}
+--- !u!114 &114721672362177204
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1291984783989996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 471d2d2016e420b4c9e9ecffc431256d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  torsoConnectors: 2
+  replacement: {fileID: 4433125509992564, guid: 1fe708332a386494ea05c739b6f28426,
+    type: 2}
+--- !u!114 &114785411238981424
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1949226094669108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb24ce9ab1f37f54da157afb0ed08247, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitPoints: 100
+  attachedToTorso: 1
+  ct: {fileID: 114721672362177204}
 --- !u!135 &135423418692753102
 SphereCollider:
   m_ObjectHideFlags: 1

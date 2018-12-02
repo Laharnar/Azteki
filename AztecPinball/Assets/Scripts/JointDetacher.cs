@@ -17,6 +17,7 @@ public class JointDetacher : MonoBehaviour
     {
         enabledJoint = false;
         HingeJoint hinge = GetComponent<HingeJoint>();
+        if (hinge)
         hinge.connectedBody = null;
         if (attachedToTorso)
         {

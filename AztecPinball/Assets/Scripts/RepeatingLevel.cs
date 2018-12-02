@@ -78,7 +78,9 @@ public class RepeatingLevel : MonoBehaviour {
     void Update () {
         // TODO: camera should follow falling body, not move in dir.
         //Camera.main.transform.position = characterRef.transform.position + ;
-        Camera.main.transform.position = characterRef.transform.position + cameraRefDir;
+        if (characterRef) {
+            Camera.main.transform.position = characterRef.transform.position + cameraRefDir;
+        }
 //        Camera.main.transform.Translate(
  //           (refPoint2.position - refPoint1.position).normalized * speed * Time.deltaTime, Space.World);
 
