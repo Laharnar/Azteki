@@ -293,7 +293,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114120634970942666}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114694220281150484}
+        m_MethodName: TutorialEnabler
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114037186745435882
@@ -689,7 +700,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundBtn: {fileID: 114037186745435882}
-  tutorialCanvas: {fileID: 223836909758787402}
+  tutorialCanvas: {fileID: 1785779077296850}
 --- !u!114 &114773713106638176
 MonoBehaviour:
   m_ObjectHideFlags: 1
