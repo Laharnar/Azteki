@@ -9,7 +9,7 @@ public class CharacterTorso : MonoBehaviour {
         torsoConnectors--;
         if (torsoConnectors == 0)
         {
-            Instantiate(replacement, transform.position, transform.rotation);
+            Instantiate(replacement, transform.position+Vector3.up*0.5f, transform.rotation);
             Destroy(gameObject);
 
             CallGameManager();
