@@ -9,11 +9,11 @@ public class Traps : MonoBehaviour {
         
     }
 
-    private void OnTriggerEnter(Collider collision) {
+    private void OnCollisionEnter(Collision collision) {
         GameManager.m.Record(collision.transform.root);
-        Rigidbody rig = collision.GetComponent<Rigidbody>();
+        Rigidbody rig = collision.transform.GetComponent<Rigidbody>();
         if (rig) {
-            rig.AddForce(forceDirection);
+            rig.AddForce(forceDirection, ForceMode.Impulse);
         }
     }
 }
