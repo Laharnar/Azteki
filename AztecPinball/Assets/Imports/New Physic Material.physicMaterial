@@ -8,6 +8,6 @@ PhysicMaterial:
   m_Name: New Physic Material
   dynamicFriction: 0.22
   staticFriction: 0.16
-  bounciness: 0.6
+  bounciness: 0.3
   frictionCombine: 2
   bounceCombine: 2
