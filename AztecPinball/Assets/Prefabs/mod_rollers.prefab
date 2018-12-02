@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 114257757149887532}
   m_Layer: 0
   m_Name: mod_rollers
-  m_TagString: Untagged
+  m_TagString: obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -292,7 +292,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6919e92acc44694fbde2c0d09ad8784, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceDirection: {x: 0, y: 100, z: 0}
+  forceDirection: {x: 0, y: 20, z: 0}
 --- !u!114 &114455583139289312
 MonoBehaviour:
   m_ObjectHideFlags: 1
