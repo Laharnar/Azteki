@@ -8,7 +8,8 @@ public class SoundEffectFalling : MonoBehaviour {
     AudioSource audio;
     public AudioClip[] screamClips;
     public AudioClip[] fallClips;
-    public ParticleSystem bloodSpillParticle;
+    public GameObject bloodSpillParticle;
+    public GameObject bloodSpillParticleBig;
 
     private void Start()
     {
@@ -22,7 +23,7 @@ public class SoundEffectFalling : MonoBehaviour {
             //here he will scream
             audio.clip = screamClips[Random.Range(0, fallClips.Length-1)];
                 audio.Play();
-            bloodSpillParticle.Play();
+            Instantiate(bloodSpillParticleBig, transform.position, transform.rotation);
            
         }
         else
@@ -31,7 +32,7 @@ public class SoundEffectFalling : MonoBehaviour {
             {
                 audio.clip = fallClips[Random.Range(0, fallClips.Length-1)];
                 audio.Play();
-                bloodSpillParticle.Play();
+                Instantiate(bloodSpillParticle, transform.position, transform.rotation);
             }
         }
     }
