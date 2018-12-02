@@ -3235,7 +3235,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 048add516994ace4f8eacc302bac2778, type: 3}
   - {fileID: 8300000, guid: 8bf2e5c23303dd448ad602cb5904f9d3, type: 3}
   - {fileID: 8300000, guid: aef1903ea181e0c4aa22e625af37d937, type: 3}
-  bloodSpillParticle: {fileID: 0}
+  bloodSpillParticle: {fileID: 1533242305}
 --- !u!65 &590341996
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4188,6 +4188,48 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 50.000004, y: -628.781, z: 0}
+--- !u!1001 &929055816
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4394893472332190, guid: de089ae41d773624391a7723a7342dd9, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 2.72
+      objectReference: {fileID: 0}
+    - target: {fileID: 4394893472332190, guid: de089ae41d773624391a7723a7342dd9, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.47599998
+      objectReference: {fileID: 0}
+    - target: {fileID: 4394893472332190, guid: de089ae41d773624391a7723a7342dd9, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -1.2899997
+      objectReference: {fileID: 0}
+    - target: {fileID: 4394893472332190, guid: de089ae41d773624391a7723a7342dd9, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4394893472332190, guid: de089ae41d773624391a7723a7342dd9, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4394893472332190, guid: de089ae41d773624391a7723a7342dd9, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4394893472332190, guid: de089ae41d773624391a7723a7342dd9, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4394893472332190, guid: de089ae41d773624391a7723a7342dd9, type: 2}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: de089ae41d773624391a7723a7342dd9, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &973883298
 GameObject:
   m_ObjectHideFlags: 0
@@ -10179,6 +10221,11 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.0000066138455, y: 0.002789029, z: 0.00000000136788}
     m_Extent: {x: 0.0005796436, y: 0.00048770197, z: 0.00044749887}
   m_DirtyAABB: 0
+--- !u!198 &1533242305 stripped
+ParticleSystem:
+  m_PrefabParentObject: {fileID: 198425566025070096, guid: de089ae41d773624391a7723a7342dd9,
+    type: 2}
+  m_PrefabInternal: {fileID: 929055816}
 --- !u!1 &1534678081
 GameObject:
   m_ObjectHideFlags: 0
