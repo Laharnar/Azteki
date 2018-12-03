@@ -11,6 +11,7 @@ public class RepeatingLevel : MonoBehaviour {
     public List<Transform> spawnedStairs = new List<Transform>();
     List<Vector3> positions = new List<Vector3>();
     public Transform[] obstaclePrefs;
+    public Transform[] stairsPrefs;
 
     public Transform stairPref;
     public int numOfSpawnPointsOnStairs = 2;
@@ -27,7 +28,7 @@ public class RepeatingLevel : MonoBehaviour {
         for (int i = 0; i < 10; i++) {
             Spawn(startPoint.transform.position);
             startPoint.transform.position += (refPoint2.position - refPoint1.position);
-            PickTraps(spawnedStairs[i]);
+            //PickTraps(spawnedStairs[i]);
         }
 
 
@@ -37,12 +38,15 @@ public class RepeatingLevel : MonoBehaviour {
         Vector3 start = pos;
 
         // spawn one stair
-        Transform stair = Instantiate(stairPref);
+        Transform stair = 
+                Instantiate(stairsPrefs[Random.Range(0, stairsPrefs.Length)]);
+        //Instantiate(stairPref);
         stair.position = start;
         start += (refPoint2.position - refPoint1.position);
 
         startPoint.transform.position = stair.position;
         spawnedStairs.Add(stair);
+        return;
 
         // spawn obstacles for stairs
         // all obstacles as children, disabled.
@@ -87,13 +91,19 @@ public class RepeatingLevel : MonoBehaviour {
         // move stairs at the top to the bottom.
         for (int i = 0; i < numOfSpawnPointsOnStairs; i++) {
             if (spawnedStairs[i].position.y > Camera.main.transform.position.y+10) {
-                spawnedStairs[i].position = spawnedStairs[spawnedStairs.Count - 1].position + (refPoint2.position - refPoint1.position);
-                spawnedStairs.Add(spawnedStairs[i]);
+                Transform chunk = Instantiate(stairsPrefs[Random.Range(0, stairsPrefs.Length)]);
+
+                //spawnedStairs[i].position =
+                chunk.position = spawnedStairs[spawnedStairs.Count - 1].position + (refPoint2.position - refPoint1.position);
+
+                spawnedStairs.Add(chunk);
+
+                Destroy(spawnedStairs[i]);
                 spawnedStairs.RemoveAt(i);
 
                 // Update traps.
                 for (int k = 0; k < spawnedStairs.Count; k++) {
-                    PickTraps(spawnedStairs[spawnedStairs.Count-1]);
+              //      PickTraps(spawnedStairs[spawnedStairs.Count-1]);
                 }
             }
         }
