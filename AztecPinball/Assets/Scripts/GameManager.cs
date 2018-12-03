@@ -6,6 +6,7 @@ public class GameManager:MonoBehaviour {
 
     public int counter = 0;
     public List<Transform> recordedCollisions = new List<Transform>();
+    public RepeatingLevel level;
 
     private void Start() {
         m = this;

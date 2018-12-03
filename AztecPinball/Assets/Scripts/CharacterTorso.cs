@@ -4,6 +4,7 @@ public class CharacterTorso : MonoBehaviour {
 
     public int torsoConnectors = 6;
     public Transform replacement;
+
     public void jointBreak()
     {
         torsoConnectors--;
